@@ -9,5 +9,12 @@ jobs:
   update_resume:
     runs-on: ubuntu-latest
     steps:
-        - run: python -v
+        - run: sudo apt-get install poppler-utils
+        - run: python createImage.py
+        - run: git config --global user.email "sondzvl129@gmail.com"
+        - run: git config --global user.name "sonnguyenHT"
+        - run: git add .
+        - run: git commit -m "Update resume"
+        - run: git push origin main
+
       
