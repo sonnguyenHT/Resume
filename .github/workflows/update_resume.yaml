@@ -9,7 +9,9 @@ jobs:
   update_resume:
     runs-on: ubuntu-latest
     steps:
-        - run: sudo apt-get install poppler-utils
+        - run: | 
+            sudo apt-get install poppler-utils -y
+            pip install pdf2image
         - uses: actions/checkout@v4
         - run: python createImage.py
         - run: |
