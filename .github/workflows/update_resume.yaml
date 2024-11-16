@@ -1,0 +1,13 @@
+name: Update Resume
+run-name: Update resume 🚀
+on: 
+    push:
+        branches:
+            - main
+
+jobs:
+  update_resume:
+    runs-on: ubuntu-latest
+    steps:
+        - run: python -v
+      
