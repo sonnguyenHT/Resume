@@ -10,11 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - run: sudo apt-get install poppler-utils
+        - uses: actions/checkout@v4
         - run: python createImage.py
-        - run: git config --global user.email "sondzvl129@gmail.com"
-        - run: git config --global user.name "sonnguyenHT"
-        - run: git add .
-        - run: git commit -m "Update resume"
-        - run: git push origin main
+        - run: |
+            git config --global user.email "sondzvl129@gmail.com"
+            git config --global user.name "sonnguyenHT"
+            git add .
+            git commit -m "Update resume"
+            git push origin main
 
       
