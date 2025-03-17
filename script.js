@@ -1,164 +1,226 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Khởi tạo các biến DOM
-    const header = document.querySelector('header');
-    const themeToggle = document.createElement('button');
-    const printButton = document.createElement('button');
-    const scrollTopButton = document.createElement('button');
-    const progressContainer = document.createElement('div');
-    const progressBar = document.createElement('div');
+// 2025 Modern Portfolio JavaScript
 
-    // Tạo thanh tiến trình cuộn
-    progressContainer.className = 'progress-container';
-    progressBar.className = 'progress-bar';
-    progressContainer.appendChild(progressBar);
-    document.body.appendChild(progressContainer);
-
-    // Hiệu ứng cuộn trang
-    window.addEventListener('scroll', function() {
-        // Cập nhật thanh tiến trình
-        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (window.scrollY / windowHeight) * 100;
-        progressBar.style.width = scrolled + '%';
-
-        // Hiển thị/ẩn nút cuộn lên đầu trang
-        if (window.scrollY > 300) {
-            scrollTopButton.classList.add('show');
-        } else {
-            scrollTopButton.classList.remove('show');
-        }
-    });
-
-    // Thêm hiệu ứng cho các phần kỹ năng
-    const skills = document.querySelectorAll('.skill');
-    skills.forEach((skill, index) => {
-        // Thêm hiệu ứng xuất hiện dần
-        skill.style.animationDelay = (index * 0.05) + 's';
-    });
-
-    // Thêm nút chuyển đổi chế độ tối/sáng
-    themeToggle.innerHTML = '🌙';
-    themeToggle.className = 'theme-toggle';
-    themeToggle.title = 'Chuyển đổi chế độ tối/sáng';
-    document.body.appendChild(themeToggle);
-
-    // Kiểm tra xem đã lưu chế độ tối chưa
-    let darkMode = localStorage.getItem('darkMode') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+    // DOM Elements
+    const body = document.body;
+    const progressBar = document.querySelector('.progress-bar');
+    const scrollTopBtn = document.querySelector('.scroll-top');
+    const themeToggle = document.querySelector('.theme-toggle');
+    const skillItems = document.querySelectorAll('.skill-tag');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
     
-    // Áp dụng chế độ đã lưu
-    if (darkMode) {
-        document.body.classList.add('dark-mode');
-        themeToggle.innerHTML = '☀️';
+    // Initialize dark mode from localStorage
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        enableDarkMode();
     }
-
-    // Xử lý sự kiện chuyển đổi chế độ
-    themeToggle.addEventListener('click', function() {
-        darkMode = !darkMode;
-        localStorage.setItem('darkMode', darkMode);
+    
+    // Update progress bar on scroll
+    function updateProgressBar() {
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const docHeight = document.documentElement.scrollHeight;
+        const totalScrollable = docHeight - windowHeight;
+        const percentage = (scrollPosition / totalScrollable) * 100;
         
-        if (darkMode) {
-            document.body.classList.add('dark-mode');
-            themeToggle.innerHTML = '☀️';
+        progressBar.style.width = `${percentage}%`;
+        
+        // Show/hide scroll to top button
+        if (scrollPosition > 300) {
+            scrollTopBtn.classList.add('show');
         } else {
-            document.body.classList.remove('dark-mode');
-            themeToggle.innerHTML = '🌙';
+            scrollTopBtn.classList.remove('show');
         }
-    });
-
-    // Thêm nút in CV
-    printButton.innerHTML = '🖨️ In CV';
-    printButton.className = 'print-button';
-    printButton.title = 'In CV';
-    document.body.appendChild(printButton);
-
-    // Xử lý sự kiện in
-    printButton.addEventListener('click', function() {
-        window.print();
-    });
-
-    // Thêm nút cuộn lên đầu trang
-    scrollTopButton.innerHTML = '↑';
-    scrollTopButton.className = 'scroll-top';
-    scrollTopButton.title = 'Cuộn lên đầu trang';
-    document.body.appendChild(scrollTopButton);
-
-    // Xử lý sự kiện cuộn lên đầu trang
-    scrollTopButton.addEventListener('click', function() {
+        
+        // Highlight active navigation link
+        highlightActiveSection(scrollPosition);
+    }
+    
+    // Highlight active navigation link based on scroll position
+    function highlightActiveSection(scrollPosition) {
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+    
+    // Animate elements on scroll
+    function animateOnScroll() {
+        const cards = document.querySelectorAll('.card, .timeline-item, .skill-category');
+        
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            const triggerBottom = window.innerHeight * 0.8;
+            
+            if (cardTop < triggerBottom) {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }
+        });
+    }
+    
+    // Toggle dark mode
+    function toggleDarkMode() {
+        if (body.classList.contains('dark-mode')) {
+            disableDarkMode();
+        } else {
+            enableDarkMode();
+        }
+    }
+    
+    // Enable dark mode
+    function enableDarkMode() {
+        body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+    
+    // Disable dark mode
+    function disableDarkMode() {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', null);
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+    
+    // Scroll to top
+    function scrollToTop() {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
-    });
-
-    // Chuyển đổi cấu trúc HTML cho card và timeline
-    function setupLayout() {
-        // Wrap nội dung trong card
-        const container = document.querySelector('.container');
-        const divs = Array.from(container.children);
-        const cardDiv = document.createElement('div');
-        cardDiv.className = 'card';
-        
-        // Di chuyển tất cả các phần tử vào card
-        divs.forEach(div => {
-            cardDiv.appendChild(div);
+    }
+    
+    // Print CV
+    function printCV() {
+        window.print();
+    }
+    
+    // Add click listeners to navigation links for smooth scrolling
+    function setupSmoothScrolling() {
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
+    }
+    
+    // Apply animation to skill tags
+    function animateSkillTags() {
+        skillItems.forEach((skill, index) => {
+            skill.style.animationDelay = `${0.1 * index}s`;
+        });
+    }
+    
+    // Sticky navbar effect
+    function handleNavbarSticky() {
+        const navbar = document.querySelector('.navbar');
+        const navbarHeight = navbar.offsetHeight;
         
-        container.appendChild(cardDiv);
-
-        // Thay đổi các tiêu đề section
-        const sections = document.querySelectorAll('.section');
-        sections.forEach(section => {
-            const h2 = section.querySelector('h2');
-            if (h2) {
-                h2.className = 'section-title';
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = 'var(--box-shadow-md)';
+                navbar.style.height = '60px';
+            } else {
+                navbar.style.boxShadow = 'var(--box-shadow-sm)';
+                navbar.style.height = '70px';
             }
         });
-
-        // Tạo timeline cho phần kinh nghiệm
-        const expSection = document.querySelector('.section:nth-of-type(3)');
-        if (expSection) {
-            const expItems = expSection.querySelectorAll('.experience-item');
-            const timeline = document.createElement('div');
-            timeline.className = 'timeline';
-            
-            expItems.forEach(item => {
-                const companyDiv = item.querySelector('.company');
-                if (companyDiv) {
-                    const companyName = companyDiv.querySelector('span:first-child');
-                    const location = companyDiv.querySelector('span:last-child');
-                    
-                    if (companyName) companyName.className = 'company-name';
-                    
-                    const jobTitle = item.querySelector('.job-title');
-                    if (jobTitle) jobTitle.className = 'experience-role';
-                }
-                
-                timeline.appendChild(item);
-            });
-            
-            // Xóa nội dung hiện tại và thêm timeline mới
-            const h2 = expSection.querySelector('h2');
-            expSection.innerHTML = '';
-            expSection.appendChild(h2);
-            expSection.appendChild(timeline);
-        }
     }
-
-    // Thiết lập bố cục
-    setupLayout();
-
-    // Thêm hiệu ứng hover cho các mục
-    document.querySelectorAll('a, button, .contact-item, .skill, .experience-item').forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            this.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-        });
-    });
-
-    // Thêm hiệu ứng typing cho tiêu đề khi tải trang
-    setTimeout(() => {
-        const h1 = document.querySelector('h1');
-        if (h1) {
-            h1.style.opacity = '1';
-            h1.style.transform = 'translateY(0)';
+    
+    // Animate the hero section elements
+    function animateHeroSection() {
+        const heroTitle = document.querySelector('.hero-title');
+        const heroSubtitle = document.querySelector('.hero-subtitle');
+        const contactInfo = document.querySelector('.contact-info');
+        const heroActions = document.querySelector('.hero-actions');
+        
+        setTimeout(() => {
+            heroTitle.style.opacity = '1';
+            heroTitle.style.transform = 'translateY(0)';
+            
+            setTimeout(() => {
+                heroSubtitle.style.opacity = '1';
+                heroSubtitle.style.transform = 'translateY(0)';
+                
+                setTimeout(() => {
+                    contactInfo.style.opacity = '1';
+                    contactInfo.style.transform = 'translateY(0)';
+                    
+                    setTimeout(() => {
+                        heroActions.style.opacity = '1';
+                        heroActions.style.transform = 'translateY(0)';
+                    }, 200);
+                }, 200);
+            }, 200);
+        }, 300);
+    }
+    
+    // Initialize all interactive elements
+    function initializeInteractions() {
+        // Theme toggle button
+        if (themeToggle) {
+            themeToggle.innerHTML = body.classList.contains('dark-mode') 
+                ? '<i class="fas fa-sun"></i>' 
+                : '<i class="fas fa-moon"></i>';
+            themeToggle.addEventListener('click', toggleDarkMode);
         }
-    }, 300);
+        
+        // Scroll to top button
+        if (scrollTopBtn) {
+            scrollTopBtn.addEventListener('click', scrollToTop);
+        }
+        
+        // Print button
+        const printBtn = document.querySelector('.print-btn');
+        if (printBtn) {
+            printBtn.addEventListener('click', printCV);
+        }
+        
+        // Setup smooth scrolling
+        setupSmoothScrolling();
+        
+        // Animate skill tags
+        animateSkillTags();
+        
+        // Handle sticky navbar
+        handleNavbarSticky();
+        
+        // Animate hero section
+        animateHeroSection();
+    }
+    
+    // Event listeners
+    window.addEventListener('scroll', () => {
+        updateProgressBar();
+        animateOnScroll();
+    });
+    
+    window.addEventListener('resize', updateProgressBar);
+    
+    // Initial update
+    updateProgressBar();
+    animateOnScroll();
+    
+    // Initialize interactions
+    initializeInteractions();
 }); 

@@ -3,115 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn Thái Sơn - Portfolio</title>
+    <meta name="description" content="CV Portfolio - Hồ sơ năng lực chuyên nghiệp">
+    <title>CV Portfolio | Chuyên gia Phát triển Frontend</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <meta name="description" content="Nguyễn Thái Sơn - DevOps Engineer với kinh nghiệm về AWS, Azure, Kubernetes và Infrastructure as Code">
 </head>
 <body>
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">CV</div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">Giới thiệu</a>
+                <a href="#skills" class="nav-link">Kỹ năng</a>
+                <a href="#experience" class="nav-link">Kinh nghiệm</a>
+                <a href="#education" class="nav-link">Học vấn</a>
+                <a href="#passion" class="nav-link">Đam mê</a>
+            </div>
+            <button class="theme-toggle" aria-label="Chuyển đổi chế độ tối/sáng">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+    
     <div class="container">
-        <header>
-            <h1>NGUYỄN THÁI SƠN</h1>
-            <div class="job-title">DevOps Engineer</div>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>+84 396 161 954</span>
+        <!-- Hero Section -->
+        <section id="about" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Nguyễn Trần Văn</h1>
+                <h2 class="hero-subtitle">Chuyên gia Phát triển Frontend</h2>
+                
+                <div class="contact-info">
+                    <a href="tel:+84123456789" class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+84 123 456 789</span>
+                    </a>
+                    <a href="mailto:example@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>example@gmail.com</span>
+                    </a>
+                    <a href="https://linkedin.com/in/username" target="_blank" rel="noopener" class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span>linkedin.com/in/username</span>
+                    </a>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Thành phố Hồ Chí Minh, Việt Nam</span>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:sonnhat129@gmail.com">sonnhat129@gmail.com</a>
+                
+                <div class="hero-actions">
+                    <button class="action-button print-btn">
+                        <i class="fas fa-print"></i>
+                        <span>In CV</span>
+                    </button>
                 </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/son-n-114539152/" target="_blank">linkedin.com/in/son-n-114539152/</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span class="location">Hồ Chí Minh, Việt Nam</span>
-                </div>
-            </div>
-        </header>
-
-        <section class="section">
-            <h2>Tóm tắt</h2>
-            <p>Tôi có kinh nghiệm thực tế trong việc triển khai và giám sát các ứng dụng và dịch vụ dựa trên đám mây. Thành thạo Python và Bash scripting, tôi có hiểu biết vững chắc về các khái niệm mạng và bảo mật. Chuyên môn của tôi bao gồm các công nghệ điện toán đám mây, tập trung vào AWS, Azure và Kubernetes (K8S) cho việc điều phối container.</p>
-        </section>
-
-        <section class="section">
-            <h2>Kỹ năng</h2>
-            <div class="skills-container">
-                <div class="skill"><span class="skill-category">Lập trình:</span> Python, Bash</div>
-                <div class="skill"><span class="skill-category">Hệ điều hành:</span> Linux, Windows</div>
-                <div class="skill"><span class="skill-category">Cơ sở dữ liệu quan hệ:</span> MySQL, PostgreSQL</div>
-                <div class="skill"><span class="skill-category">Infrastructure as Code:</span> Terraform, Terragrunt, Ansible</div>
-                <div class="skill"><span class="skill-category">Dịch vụ đám mây:</span> AWS, Azure</div>
-                <div class="skill"><span class="skill-category">Quản lý phiên bản:</span> Git</div>
-                <div class="skill"><span class="skill-category">Container hóa:</span> Docker</div>
-                <div class="skill"><span class="skill-category">Điều phối container:</span> Kubernetes (K8S, K3S)</div>
-                <div class="skill"><span class="skill-category">Công cụ CI/CD:</span> GitHub Actions, GitLab Actions, ArgoCD</div>
-                <div class="skill"><span class="skill-category">Công cụ giám sát:</span> Prometheus, Grafana, Loki</div>
-                <div class="skill"><span class="skill-category">Service Mesh:</span> Istio</div>
             </div>
         </section>
-
-        <section class="section">
-            <h2>Kinh nghiệm</h2>
-            
-            <div class="experience-item">
-                <div class="company">
-                    <span>LTV SOFTWARE COMPANY LIMITED</span>
-                    <span class="location"><i class="fas fa-map-pin"></i> Hồ Chí Minh, 06/2024 - Hiện tại</span>
-                </div>
-                <div class="job-title" style="font-size: 1.1em; margin: 5px 0;">DevOps Engineer</div>
-                <ul>
-                    <li>Thiết lập service mesh (Istio) trên cụm EKS để quản lý định tuyến lưu lượng và ingress một cách hiệu quả.</li>
-                    <li>Thiết lập pipeline hiệu quả cho các repository mới sử dụng GitHub Actions và GitLab Actions.</li>
-                    <li>Cải thiện phân bổ tài nguyên cho các dịch vụ trên EKS.</li>
-                    <li>Quản lý các dịch vụ khác nhau liên quan đến hậu cần vận tải hàng hải.</li>
-                    <li>Cài đặt và cập nhật các dịch vụ từ xa trong cụm K3S trên tàu biển.</li>
-                    <li>Giám sát các dịch vụ Java cả trên tàu và bờ bằng JMX exporter và Prometheus, hiển thị số liệu trên Grafana.</li>
-                    <li>Thiết lập ghi nhật ký tập trung cho tất cả các dịch vụ trên bờ bằng Loki và Grafana.</li>
-                </ul>
-            </div>
-            
-            <div class="experience-item">
-                <div class="company">
-                    <span>GALAXY FINX JOINT STOCK COMPANY</span>
-                    <span class="location"><i class="fas fa-map-pin"></i> Hồ Chí Minh, 10/2022 - 11/2023</span>
-                </div>
-                <div class="job-title" style="font-size: 1.1em; margin: 5px 0;">Cloud Engineer</div>
-                <ul>
-                    <li>Tạo các module Terraform cho AWS VPC, load balancers, autoscaling groups, EC2 instances, Azure vNet, Azure Kubernetes, và nhiều hơn nữa.</li>
-                    <li>Quản lý trạng thái Terraform thông qua Terragrunt với các tệp trạng thái trên AWS S3 và khóa với DynamoDB.</li>
-                    <li>Phát triển các script Ansible cho cụm Couchbase, quản lý người dùng Bastion VM và thiết lập OpenVPN.</li>
-                    <li>Triển khai tài nguyên Kubernetes sử dụng ArgoCD cho việc triển khai liên tục.</li>
-                    <li>Sử dụng các công cụ CI như GitHub Actions để tạo các image triển khai.</li>
-                    <li>Triển khai hệ thống giám sát với Prometheus và Grafana.</li>
-                </ul>
+        
+        <!-- About Section -->
+        <section id="summary" class="section">
+            <h2 class="section-title">Tóm tắt</h2>
+            <div class="card">
+                <p class="section-content">
+                    Là một chuyên gia phát triển Frontend với hơn 7 năm kinh nghiệm, tôi tập trung vào việc tạo ra trải nghiệm người dùng mượt mà, đẹp mắt và tối ưu hiệu suất. Tôi thành thạo các công nghệ web hiện đại, đặc biệt là React, Vue.js và TypeScript, cùng với khả năng phối hợp hiệu quả với đội ngũ thiết kế và backend để tạo ra các sản phẩm số chất lượng cao.
+                </p>
             </div>
         </section>
-
-        <section class="section">
-            <h2>Học vấn</h2>
-            <div class="experience-item">
-                <div class="company">
-                    <span>Đại học FPT, Hồ Chí Minh</span>
-                    <span class="location"><i class="fas fa-calendar-alt"></i> 09/2020 - 05/2024</span>
+        
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title">Kỹ năng</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Ngôn ngữ lập trình</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3/SCSS</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-cubes"></i>
+                        <h3>Framework & Thư viện</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Redux</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Công cụ</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Webpack</span>
+                        <span class="skill-tag">Vite</span>
+                        <span class="skill-tag">Jest</span>
+                        <span class="skill-tag">Figma</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Khác</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">Progressive Web Apps</span>
+                        <span class="skill-tag">Performance Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <h2 class="section-title">Kinh nghiệm</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2020 - Hiện tại</div>
+                    <div class="timeline-content">
+                        <h3 class="company-name">Công ty Công nghệ XYZ</h3>
+                        <span class="job-title">Senior Frontend Developer</span>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Thành phố Hồ Chí Minh, Việt Nam</span>
+                        </div>
+                        <ul class="responsibility-list">
+                            <li>Phát triển và duy trì các dự án frontend sử dụng React, TypeScript và Next.js</li>
+                            <li>Tối ưu hóa hiệu suất trang web, cải thiện thời gian tải trang lên 40%</li>
+                            <li>Mentoring cho các thành viên junior trong team, tổ chức các buổi đào tạo nội bộ</li>
+                            <li>Cộng tác với UI/UX designers để tạo ra giao diện người dùng trực quan và thân thiện</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2018 - 2020</div>
+                    <div class="timeline-content">
+                        <h3 class="company-name">Công ty Phần mềm ABC</h3>
+                        <span class="job-title">Frontend Developer</span>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Hà Nội, Việt Nam</span>
+                        </div>
+                        <ul class="responsibility-list">
+                            <li>Phát triển giao diện người dùng cho các ứng dụng web sử dụng Vue.js và Vuex</li>
+                            <li>Thiết kế và triển khai các component tái sử dụng cho toàn hệ thống</li>
+                            <li>Tích hợp REST API và GraphQL để hiển thị dữ liệu động</li>
+                            <li>Phát hiện và sửa lỗi, cải thiện UX cho người dùng</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2016 - 2018</div>
+                    <div class="timeline-content">
+                        <h3 class="company-name">Startup DEF</h3>
+                        <span class="job-title">Web Developer</span>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Đà Nẵng, Việt Nam</span>
+                        </div>
+                        <ul class="responsibility-list">
+                            <li>Phát triển và thiết kế website sử dụng HTML, CSS, JavaScript và jQuery</li>
+                            <li>Đảm bảo khả năng tương thích đa trình duyệt và thiết kế responsive</li>
+                            <li>Làm việc với WordPress, tùy chỉnh theme và plugin</li>
+                            <li>Phối hợp với team marketing để tối ưu hóa SEO</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <h2 class="section-title">Học vấn</h2>
+            <div class="card education-card">
+                <div class="education-header">
+                    <div class="education-logo">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="education-info">
+                        <h3 class="university-name">Đại học Bách Khoa</h3>
+                        <div class="education-period">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>2012 - 2016</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="education-details">
-                    <div><strong>Chuyên ngành:</strong> Đảm bảo An toàn Thông tin</div>
-                    <div><strong>GPA cuối cùng:</strong> 8.1/10</div>
-                    <div><strong>Thành tích:</strong> Giải thưởng Sinh viên Giỏi trong các học kỳ Xuân, Hè và Thu.</div>
+                    <div class="education-detail">
+                        <strong>Bằng cấp:</strong> Kỹ sư Công nghệ Thông tin
+                    </div>
+                    <div class="education-detail">
+                        <strong>Điểm GPA:</strong> 3.8/4.0
+                    </div>
+                    <div class="education-detail">
+                        <strong>Các môn học nổi bật:</strong> Lập trình Web, Cơ sở dữ liệu, Công nghệ phần mềm, Phân tích & Thiết kế hệ thống
+                    </div>
+                    <div class="education-detail">
+                        <strong>Thành tích:</strong> Sinh viên xuất sắc năm học 2015-2016, Giải nhất cuộc thi Hackathon 2014
+                    </div>
                 </div>
             </div>
         </section>
-
-        <section class="section">
-            <h2>Đam mê</h2>
-            <p>Tôi mong muốn tham gia vào một công ty đầu tư vào sự phát triển của nhân viên với lộ trình sự nghiệp có cấu trúc và cơ hội học tập liên tục như đào tạo, hội thảo và chứng chỉ. Tôi đặc biệt đam mê tối ưu hóa các pipeline CI/CD để loại bỏ các điểm nghẽn và cải thiện hiệu quả.</p>
+        
+        <!-- Passion Section -->
+        <section id="passion" class="section">
+            <h2 class="section-title">Đam mê</h2>
+            <div class="card">
+                <div class="passion-content">
+                    <div class="passion-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <p class="section-content">
+                            Ngoài công việc, tôi còn đam mê tìm hiểu và thử nghiệm các công nghệ mới, tham gia các buổi meetup về công nghệ, và đóng góp cho các dự án mã nguồn mở. Tôi thường xuyên viết blog về những kiến thức, kinh nghiệm làm việc trong lĩnh vực Frontend, và chia sẻ các giải pháp cho những vấn đề phức tạp mà tôi gặp phải.
+                        </p>
+                        <p class="section-content">
+                            Tôi cũng rất quan tâm đến UI/UX và luôn cố gắng tạo ra những sản phẩm không chỉ hoạt động tốt mà còn mang lại trải nghiệm tuyệt vời cho người dùng. Mục tiêu của tôi là trở thành một developer toàn diện, không chỉ giỏi về kỹ thuật mà còn hiểu sâu về trải nghiệm người dùng và giá trị kinh doanh.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2023-2025 - CV Portfolio | Thiết kế bởi Nguyễn Trần Văn</p>
+        </div>
+    </footer>
+    
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" aria-label="Cuộn lên đầu trang">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html> 
