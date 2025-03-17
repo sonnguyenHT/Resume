@@ -23,15 +23,21 @@
         <div class="nav-container">
             <div class="nav-logo">NS</div>
             <div class="nav-links">
-                <a href="#about" class="nav-link">Giới thiệu</a>
-                <a href="#skills" class="nav-link">Kỹ năng</a>
-                <a href="#experience" class="nav-link">Kinh nghiệm</a>
-                <a href="#education" class="nav-link">Học vấn</a>
-                <a href="#passion" class="nav-link">Đam mê</a>
+                <a href="#about" class="nav-link" data-vi="Giới thiệu" data-en="About">Giới thiệu</a>
+                <a href="#skills" class="nav-link" data-vi="Kỹ năng" data-en="Skills">Kỹ năng</a>
+                <a href="#experience" class="nav-link" data-vi="Kinh nghiệm" data-en="Experience">Kinh nghiệm</a>
+                <a href="#education" class="nav-link" data-vi="Học vấn" data-en="Education">Học vấn</a>
+                <a href="#passion" class="nav-link" data-vi="Đam mê" data-en="Passion">Đam mê</a>
             </div>
-            <button class="theme-toggle" aria-label="Chuyển đổi chế độ tối/sáng">
-                <i class="fas fa-moon"></i>
-            </button>
+            <div class="nav-tools">
+                <button class="language-toggle" aria-label="Chuyển đổi ngôn ngữ">
+                    <i class="fas fa-globe"></i>
+                    <span class="lang-text" data-vi="EN" data-en="VI">EN</span>
+                </button>
+                <button class="theme-toggle" aria-label="Chuyển đổi chế độ tối/sáng">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </div>
     </nav>
     
@@ -40,7 +46,7 @@
         <section id="about" class="hero-section">
             <div class="hero-content">
                 <h1 class="hero-title">NGUYỄN THÁI SƠN</h1>
-                <h2 class="hero-subtitle">DevOps Engineer</h2>
+                <h2 class="hero-subtitle" data-vi="DevOps Engineer" data-en="DevOps Engineer">DevOps Engineer</h2>
                 
                 <div class="contact-info">
                     <a href="tel:+84396161954" class="contact-item">
@@ -57,14 +63,14 @@
                     </a>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Hồ Chí Minh, Việt Nam</span>
+                        <span data-vi="Hồ Chí Minh, Việt Nam" data-en="Ho Chi Minh City, Vietnam">Hồ Chí Minh, Việt Nam</span>
                     </div>
                 </div>
                 
                 <div class="hero-actions">
                     <button class="action-button print-btn">
                         <i class="fas fa-print"></i>
-                        <span>In CV</span>
+                        <span data-vi="In CV" data-en="Print CV">In CV</span>
                     </button>
                 </div>
             </div>
@@ -72,9 +78,10 @@
         
         <!-- About Section -->
         <section id="summary" class="section">
-            <h2 class="section-title">Tóm tắt</h2>
+            <h2 class="section-title" data-vi="Tóm tắt" data-en="Summary">Tóm tắt</h2>
             <div class="card">
-                <p class="section-content">
+                <p class="section-content" data-vi="Tôi có kinh nghiệm thực tế trong việc triển khai và giám sát các ứng dụng và dịch vụ dựa trên đám mây. Thành thạo Python và Bash scripting, tôi có hiểu biết vững chắc về các khái niệm mạng và bảo mật. Chuyên môn của tôi bao gồm các công nghệ điện toán đám mây, tập trung vào AWS, Azure và Kubernetes (K8S) cho việc điều phối container." 
+                   data-en="I have practical experience in deploying and overseeing cloud-based applications and services. Skilled in Python and Bash scripting, I have a strong grasp of networking and security concepts. My expertise includes cloud computing technologies, focusing on AWS, Azure, and Kubernetes (K8S) for container orchestration.">
                     Tôi có kinh nghiệm thực tế trong việc triển khai và giám sát các ứng dụng và dịch vụ dựa trên đám mây. Thành thạo Python và Bash scripting, tôi có hiểu biết vững chắc về các khái niệm mạng và bảo mật. Chuyên môn của tôi bao gồm các công nghệ điện toán đám mây, tập trung vào AWS, Azure và Kubernetes (K8S) cho việc điều phối container.
                 </p>
             </div>
@@ -82,12 +89,12 @@
         
         <!-- Skills Section -->
         <section id="skills" class="section">
-            <h2 class="section-title">Kỹ năng</h2>
+            <h2 class="section-title" data-vi="Kỹ năng" data-en="Skills">Kỹ năng</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fas fa-code"></i>
-                        <h3>Ngôn ngữ lập trình</h3>
+                        <h3 data-vi="Ngôn ngữ lập trình" data-en="Programming Languages">Ngôn ngữ lập trình</h3>
                     </div>
                     <div class="skill-items">
                         <span class="skill-tag">Python</span>
@@ -98,7 +105,7 @@
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fas fa-server"></i>
-                        <h3>Hệ điều hành</h3>
+                        <h3 data-vi="Hệ điều hành" data-en="Operating Systems">Hệ điều hành</h3>
                     </div>
                     <div class="skill-items">
                         <span class="skill-tag">Linux</span>
@@ -109,7 +116,7 @@
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fas fa-database"></i>
-                        <h3>Cơ sở dữ liệu</h3>
+                        <h3 data-vi="Cơ sở dữ liệu" data-en="Databases">Cơ sở dữ liệu</h3>
                     </div>
                     <div class="skill-items">
                         <span class="skill-tag">MySQL</span>
@@ -120,7 +127,7 @@
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fas fa-network-wired"></i>
-                        <h3>Infrastructure as Code</h3>
+                        <h3 data-vi="Infrastructure as Code" data-en="Infrastructure as Code">Infrastructure as Code</h3>
                     </div>
                     <div class="skill-items">
                         <span class="skill-tag">Terraform</span>
@@ -132,7 +139,7 @@
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fas fa-cloud"></i>
-                        <h3>Dịch vụ đám mây</h3>
+                        <h3 data-vi="Dịch vụ đám mây" data-en="Cloud Services">Dịch vụ đám mây</h3>
                     </div>
                     <div class="skill-items">
                         <span class="skill-tag">AWS</span>
@@ -143,7 +150,7 @@
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fab fa-git-alt"></i>
-                        <h3>Version Control</h3>
+                        <h3 data-vi="Version Control" data-en="Version Control">Version Control</h3>
                     </div>
                     <div class="skill-items">
                         <span class="skill-tag">Git</span>
@@ -153,7 +160,7 @@
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fab fa-docker"></i>
-                        <h3>Containerization</h3>
+                        <h3 data-vi="Containerization" data-en="Containerization">Containerization</h3>
                     </div>
                     <div class="skill-items">
                         <span class="skill-tag">Docker</span>
@@ -163,7 +170,7 @@
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fas fa-dharmachakra"></i>
-                        <h3>Container Orchestration</h3>
+                        <h3 data-vi="Container Orchestration" data-en="Container Orchestration">Container Orchestration</h3>
                     </div>
                     <div class="skill-items">
                         <span class="skill-tag">Kubernetes (K8S)</span>
@@ -174,7 +181,7 @@
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fas fa-sync-alt"></i>
-                        <h3>CI/CD Tools</h3>
+                        <h3 data-vi="CI/CD Tools" data-en="CI/CD Tools">CI/CD Tools</h3>
                     </div>
                     <div class="skill-items">
                         <span class="skill-tag">GitHub Actions</span>
@@ -186,7 +193,7 @@
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fas fa-chart-line"></i>
-                        <h3>Monitoring Tools</h3>
+                        <h3 data-vi="Monitoring Tools" data-en="Monitoring Tools">Monitoring Tools</h3>
                     </div>
                     <div class="skill-items">
                         <span class="skill-tag">Prometheus</span>
@@ -198,7 +205,7 @@
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fas fa-project-diagram"></i>
-                        <h3>Service Mesh</h3>
+                        <h3 data-vi="Service Mesh" data-en="Service Mesh">Service Mesh</h3>
                     </div>
                     <div class="skill-items">
                         <span class="skill-tag">Istio</span>
@@ -209,26 +216,26 @@
         
         <!-- Experience Section -->
         <section id="experience" class="section">
-            <h2 class="section-title">Kinh nghiệm</h2>
+            <h2 class="section-title" data-vi="Kinh nghiệm" data-en="Experience">Kinh nghiệm</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">06/2024 - Hiện tại</div>
+                    <div class="timeline-date">06/2024 - <span data-vi="Hiện tại" data-en="Present">Hiện tại</span></div>
                     <div class="timeline-content">
                         <h3 class="company-name">LTV SOFTWARE COMPANY LIMITED</h3>
                         <span class="job-title">DevOps Engineer</span>
                         <div class="location">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Hồ Chí Minh, Việt Nam</span>
+                            <span data-vi="Hồ Chí Minh, Việt Nam" data-en="Ho Chi Minh City, Vietnam">Hồ Chí Minh, Việt Nam</span>
                         </div>
                         <ul class="responsibility-list">
-                            <li>Thiết lập service mesh (Istio) trên cụm EKS để quản lý định tuyến lưu lượng và ingress một cách hiệu quả</li>
-                            <li>Thiết lập pipeline hiệu quả cho các repository mới sử dụng GitHub Actions và GitLab Actions</li>
-                            <li>Cải thiện phân bổ tài nguyên cho các dịch vụ trên EKS</li>
-                            <li>Quản lý các dịch vụ khác nhau liên quan đến hậu cần vận tải hàng hải</li>
-                            <li>Cài đặt và cập nhật các dịch vụ từ xa trong cụm K3S trên tàu biển</li>
-                            <li>Giám sát các dịch vụ Java cả trên tàu và bờ bằng JMX exporter và Prometheus, hiển thị số liệu trên Grafana</li>
-                            <li>Thiết lập ghi nhật ký tập trung cho tất cả các dịch vụ trên bờ bằng Loki và Grafana</li>
+                            <li data-vi="Thiết lập service mesh (Istio) trên cụm EKS để quản lý định tuyến lưu lượng và ingress một cách hiệu quả" data-en="Set up a service mesh (Istio) on an EKS cluster to manage traffic routing and ingress effectively">Thiết lập service mesh (Istio) trên cụm EKS để quản lý định tuyến lưu lượng và ingress một cách hiệu quả</li>
+                            <li data-vi="Thiết lập pipeline hiệu quả cho các repository mới sử dụng GitHub Actions và GitLab Actions" data-en="Established efficient pipelines for new repositories using GitHub Actions and GitLab Actions">Thiết lập pipeline hiệu quả cho các repository mới sử dụng GitHub Actions và GitLab Actions</li>
+                            <li data-vi="Cải thiện phân bổ tài nguyên cho các dịch vụ trên EKS" data-en="Improved resource allocation for services on EKS">Cải thiện phân bổ tài nguyên cho các dịch vụ trên EKS</li>
+                            <li data-vi="Quản lý các dịch vụ khác nhau liên quan đến hậu cần vận tải hàng hải" data-en="Managed various services related to maritime transport logistics">Quản lý các dịch vụ khác nhau liên quan đến hậu cần vận tải hàng hải</li>
+                            <li data-vi="Cài đặt và cập nhật các dịch vụ từ xa trong cụm K3S trên tàu biển" data-en="Install and update for remote services in K3S cluster on vessel ships">Cài đặt và cập nhật các dịch vụ từ xa trong cụm K3S trên tàu biển</li>
+                            <li data-vi="Giám sát các dịch vụ Java cả trên tàu và bờ bằng JMX exporter và Prometheus, hiển thị số liệu trên Grafana" data-en="Monitoring Java services both vessel and shore by JMX exporter and Prometheus, show metrics on Grafana">Giám sát các dịch vụ Java cả trên tàu và bờ bằng JMX exporter và Prometheus, hiển thị số liệu trên Grafana</li>
+                            <li data-vi="Thiết lập ghi nhật ký tập trung cho tất cả các dịch vụ trên bờ bằng Loki và Grafana" data-en="Setup centralized logging for all services on shore by Loki and Grafana">Thiết lập ghi nhật ký tập trung cho tất cả các dịch vụ trên bờ bằng Loki và Grafana</li>
                         </ul>
                     </div>
                 </div>
@@ -241,15 +248,15 @@
                         <span class="job-title">Cloud Engineer</span>
                         <div class="location">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Hồ Chí Minh, Việt Nam</span>
+                            <span data-vi="Hồ Chí Minh, Việt Nam" data-en="Ho Chi Minh City, Vietnam">Hồ Chí Minh, Việt Nam</span>
                         </div>
                         <ul class="responsibility-list">
-                            <li>Tạo các module Terraform cho AWS VPC, load balancers, autoscaling groups, EC2 instances, Azure vNet, Azure Kubernetes, và nhiều hơn nữa</li>
-                            <li>Quản lý trạng thái Terraform thông qua Terragrunt với các tệp trạng thái trên AWS S3 và khóa với DynamoDB</li>
-                            <li>Phát triển các script Ansible cho cụm Couchbase, quản lý người dùng Bastion VM và thiết lập OpenVPN</li>
-                            <li>Triển khai tài nguyên Kubernetes sử dụng ArgoCD cho việc triển khai liên tục</li>
-                            <li>Sử dụng các công cụ CI như GitHub Actions để tạo các image triển khai</li>
-                            <li>Triển khai hệ thống giám sát với Prometheus và Grafana</li>
+                            <li data-vi="Tạo các module Terraform cho AWS VPC, load balancers, autoscaling groups, EC2 instances, Azure vNet, Azure Kubernetes, và nhiều hơn nữa" data-en="Created Terraform modules for AWS VPC, load balancers, autoscaling groups, EC2 instances, Azure vNet, Azure Kubernetes, and more">Tạo các module Terraform cho AWS VPC, load balancers, autoscaling groups, EC2 instances, Azure vNet, Azure Kubernetes, và nhiều hơn nữa</li>
+                            <li data-vi="Quản lý trạng thái Terraform thông qua Terragrunt với các tệp trạng thái trên AWS S3 và khóa với DynamoDB" data-en="Managed Terraform state via Terragrunt with state files on AWS S3 and locks with DynamoDB">Quản lý trạng thái Terraform thông qua Terragrunt với các tệp trạng thái trên AWS S3 và khóa với DynamoDB</li>
+                            <li data-vi="Phát triển các script Ansible cho cụm Couchbase, quản lý người dùng Bastion VM và thiết lập OpenVPN" data-en="Developed Ansible scripts for Couchbase clusters, Bastion VM user management, and OpenVPN setup">Phát triển các script Ansible cho cụm Couchbase, quản lý người dùng Bastion VM và thiết lập OpenVPN</li>
+                            <li data-vi="Triển khai tài nguyên Kubernetes sử dụng ArgoCD cho việc triển khai liên tục" data-en="Deployed Kubernetes resources using ArgoCD for continuous deployment">Triển khai tài nguyên Kubernetes sử dụng ArgoCD cho việc triển khai liên tục</li>
+                            <li data-vi="Sử dụng các công cụ CI như GitHub Actions để tạo các image triển khai" data-en="Utilized CI tools like GitHub Actions for creating deployment images">Sử dụng các công cụ CI như GitHub Actions để tạo các image triển khai</li>
+                            <li data-vi="Triển khai hệ thống giám sát với Prometheus và Grafana" data-en="Implemented monitoring systems with Prometheus and Grafana">Triển khai hệ thống giám sát với Prometheus và Grafana</li>
                         </ul>
                     </div>
                 </div>
@@ -258,14 +265,14 @@
         
         <!-- Education Section -->
         <section id="education" class="section">
-            <h2 class="section-title">Học vấn</h2>
+            <h2 class="section-title" data-vi="Học vấn" data-en="Education">Học vấn</h2>
             <div class="card education-card">
                 <div class="education-header">
                     <div class="education-logo">
                         <i class="fas fa-university"></i>
                     </div>
                     <div class="education-info">
-                        <h3 class="university-name">Đại học FPT, Hồ Chí Minh</h3>
+                        <h3 class="university-name" data-vi="Đại học FPT, Hồ Chí Minh" data-en="FPT University, Ho Chi Minh City">Đại học FPT, Hồ Chí Minh</h3>
                         <div class="education-period">
                             <i class="far fa-calendar-alt"></i>
                             <span>09/2020 - 05/2024</span>
@@ -274,13 +281,13 @@
                 </div>
                 <div class="education-details">
                     <div class="education-detail">
-                        <strong>Chuyên ngành:</strong> Đảm bảo An toàn Thông tin
+                        <strong data-vi="Chuyên ngành:" data-en="Major:">Chuyên ngành:</strong> <span data-vi="Đảm bảo An toàn Thông tin" data-en="Information Assurance">Đảm bảo An toàn Thông tin</span>
                     </div>
                     <div class="education-detail">
-                        <strong>GPA cuối cùng:</strong> 8.1/10
+                        <strong data-vi="GPA cuối cùng:" data-en="Final GPA:">GPA cuối cùng:</strong> 8.1/10
                     </div>
                     <div class="education-detail">
-                        <strong>Thành tích:</strong> Giải thưởng Sinh viên Giỏi trong các học kỳ Xuân, Hè và Thu
+                        <strong data-vi="Thành tích:" data-en="Achievements:">Thành tích:</strong> <span data-vi="Giải thưởng Sinh viên Giỏi trong các học kỳ Xuân, Hè và Thu" data-en="Good Student Award in Spring, Summer, and Fall semesters">Giải thưởng Sinh viên Giỏi trong các học kỳ Xuân, Hè và Thu</span>
                     </div>
                 </div>
             </div>
@@ -288,14 +295,14 @@
         
         <!-- Passion Section -->
         <section id="passion" class="section">
-            <h2 class="section-title">Đam mê</h2>
+            <h2 class="section-title" data-vi="Đam mê" data-en="Passion">Đam mê</h2>
             <div class="card">
                 <div class="passion-content">
                     <div class="passion-icon">
                         <i class="fas fa-rocket"></i>
                     </div>
                     <div>
-                        <p class="section-content">
+                        <p class="section-content" data-vi="Tôi mong muốn tham gia vào một công ty đầu tư vào sự phát triển của nhân viên với lộ trình sự nghiệp có cấu trúc và cơ hội học tập liên tục như đào tạo, hội thảo và chứng chỉ. Tôi đặc biệt đam mê tối ưu hóa các pipeline CI/CD để loại bỏ các điểm nghẽn và cải thiện hiệu quả." data-en="I am eager to join a company that invests in employee growth with structured career paths and continuous learning opportunities such as training, workshops, and certifications. I am particularly passionate about optimizing CI/CD pipelines to eliminate bottlenecks and improve efficiency.">
                             Tôi mong muốn tham gia vào một công ty đầu tư vào sự phát triển của nhân viên với lộ trình sự nghiệp có cấu trúc và cơ hội học tập liên tục như đào tạo, hội thảo và chứng chỉ. Tôi đặc biệt đam mê tối ưu hóa các pipeline CI/CD để loại bỏ các điểm nghẽn và cải thiện hiệu quả.
                         </p>
                     </div>

@@ -10,6 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
     
+    // Language Toggle
+    const languageToggle = document.querySelector('.language-toggle');
+    const langText = document.querySelector('.lang-text');
+    
+    // Check if there's a saved language preference
+    const savedLanguage = localStorage.getItem('language') || 'vi';
+    
+    // Set initial language
+    setLanguage(savedLanguage);
+    
     // Initialize dark mode from localStorage
     if (localStorage.getItem('darkMode') === 'enabled') {
         enableDarkMode();
@@ -173,6 +183,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 200);
             }, 200);
         }, 300);
+    }
+    
+    // Add language toggle event listener
+    if (languageToggle) {
+        languageToggle.addEventListener('click', function() {
+            const currentLang = document.documentElement.getAttribute('lang');
+            const newLang = currentLang === 'vi' ? 'en' : 'vi';
+            setLanguage(newLang);
+            localStorage.setItem('language', newLang);
+        });
+    }
+    
+    // Function to set language
+    function setLanguage(lang) {
+        document.documentElement.setAttribute('lang', lang);
+        
+        // Update toggle button text
+        if (langText) {
+            langText.textContent = lang === 'vi' ? 'EN' : 'VI';
+        }
+        
+        // Update all elements with data-vi and data-en attributes
+        const elementsWithLang = document.querySelectorAll('[data-vi][data-en]');
+        elementsWithLang.forEach(element => {
+            element.textContent = element.getAttribute(`data-${lang}`);
+        });
     }
     
     // Initialize all interactive elements
