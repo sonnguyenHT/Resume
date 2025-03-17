@@ -226,10 +226,10 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollTopBtn.addEventListener('click', scrollToTop);
         }
         
-        // Print button
-        const printBtn = document.querySelector('.print-btn');
-        if (printBtn) {
-            printBtn.addEventListener('click', printCV);
+        // Print button (new fixed position)
+        const printBtnFixed = document.querySelector('.print-btn-fixed');
+        if (printBtnFixed) {
+            printBtnFixed.addEventListener('click', printCV);
         }
         
         // Setup smooth scrolling

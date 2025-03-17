@@ -758,6 +758,34 @@ strong {
     transform: translateY(20px);
 }
 
+/* Print CV Fixed Button */
+.print-btn-fixed {
+    position: fixed;
+    bottom: var(--spacing-8);
+    left: var(--spacing-8);
+    padding: var(--spacing-3) var(--spacing-6);
+    border-radius: var(--border-radius-full);
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    box-shadow: var(--box-shadow-md);
+    transition: var(--transition-normal);
+    z-index: var(--z-fixed);
+}
+
+.print-btn-fixed:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-lg);
+}
+
+.print-btn-fixed i {
+    font-size: var(--font-size-base);
+}
+
 .scroll-top.show {
     opacity: 1;
     visibility: visible;
@@ -942,11 +970,24 @@ strong {
         align-items: flex-start;
     }
     
-    .scroll-top {
-        right: var(--spacing-4);
-        bottom: var(--spacing-4);
+    .scroll-top,
+    .print-btn-fixed {
         width: 40px;
         height: 40px;
+        bottom: var(--spacing-4);
+    }
+    
+    .scroll-top {
+        right: var(--spacing-4);
+    }
+    
+    .print-btn-fixed {
+        left: var(--spacing-4);
+        padding: 0;
+    }
+    
+    .print-btn-fixed span {
+        display: none;
     }
 }
 
@@ -976,7 +1017,8 @@ strong {
 @media print {
     .navbar, 
     .theme-toggle, 
-    .scroll-top, 
+    .scroll-top,
+    .print-btn-fixed,
     .progress-container,
     .footer,
     .action-button {
