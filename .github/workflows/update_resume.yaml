@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - resume.tex
     paths-ignore:
       - Instructions.md
       - README.md
