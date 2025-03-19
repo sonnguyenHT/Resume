@@ -6,11 +6,11 @@ on:
       - main
     paths:
       - resume.tex
-    paths-ignore:
-      - Instructions.md
-      - README.md
-      - .github/workflows/update_resume.yaml
-      - .gitignore
+    # paths-ignore:
+    #   - Instructions.md
+    #   - README.md
+    #   - .github/workflows/update_resume.yaml
+    #   - .gitignore
 
 
 jobs:
