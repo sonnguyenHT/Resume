@@ -199,10 +199,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function setLanguage(lang) {
         document.documentElement.setAttribute('lang', lang);
         
-        // Update toggle button icon
-        const langIcon = document.querySelector('.lang-icon');
-        if (langIcon) {
-            langIcon.textContent = lang === 'vi' ? 'EN' : 'VI';
+        // Update toggle button text
+        if (langText) {
+            langText.textContent = lang === 'vi' ? 'EN' : 'VI';
         }
         
         // Update print button text
@@ -215,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const elementsWithLang = document.querySelectorAll('[data-vi][data-en]');
         elementsWithLang.forEach(element => {
             // Skip elements already handled above
-            if (element === langIcon || element === printText) {
+            if (element === langText || element === printText) {
                 return;
             }
             

@@ -1104,8 +1104,12 @@ strong {
     color: white;
 }
 
-.language-toggle .lang-icon {
-    font-size: 0.9rem;
+.language-toggle .fas {
+    margin-right: 0.3rem;
+}
+
+.language-toggle .lang-text {
+    font-size: 0.8rem;
     font-weight: 600;
 }
 
