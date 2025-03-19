@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const langText = document.querySelector('.lang-text');
     
     // Check if there's a saved language preference
-    const savedLanguage = localStorage.getItem('language') || 'vi';
+    const savedLanguage = localStorage.getItem('language') || 'en';
     
     // Set initial language
     setLanguage(savedLanguage);
