@@ -204,9 +204,21 @@ document.addEventListener('DOMContentLoaded', () => {
             langText.textContent = lang === 'vi' ? 'EN' : 'VI';
         }
         
+        // Update print button text
+        const printText = document.querySelector('.print-text');
+        if (printText) {
+            printText.textContent = printText.getAttribute(`data-${lang}`);
+        }
+        
         // Update all elements with data-vi and data-en attributes
         const elementsWithLang = document.querySelectorAll('[data-vi][data-en]');
         elementsWithLang.forEach(element => {
+            // Skip elements already handled above
+            if (element === langText || element === printText) {
+                return;
+            }
+            
+            // Standard text replacement for other elements
             element.textContent = element.getAttribute(`data-${lang}`);
         });
     }
