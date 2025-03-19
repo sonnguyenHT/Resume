@@ -1,0 +1,28 @@
+name: Update Resume
+run-name: Update resume 🚀
+on: 
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - Instructions.md
+      - README.md
+      - .github/workflows/update_resume.yaml
+      - .gitignore
+
+
+jobs:
+  update_resume:
+    runs-on: ubuntu-latest
+    steps:
+      - run: | 
+          sudo apt-get install poppler-utils -y
+          pip install pdf2image
+      - uses: actions/checkout@v4
+      - run: python createImage.py
+      - run: |
+          git config --global user.email "sondzvl129@gmail.com"
+          git config --global user.name "sonnguyenHT"
+          git add .
+          git commit -m "Update resume"
+          git push origin main
