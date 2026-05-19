@@ -1,0 +1,108 @@
+% !TEX program = xelatex
+\documentclass[a4paper,10pt]{article}
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\geometry{margin=1in}
+\setmainfont{Arial}
+
+\begin{document}
+
+\noindent
+\begin{minipage}[t]{0.73\textwidth}
+\begin{center}
+    {\Huge \textbf{Nguyễn Thái Sơn}} \\
+    \vspace{6pt}
+    \textbf{Kỹ sư Hạ tầng IT (Mạng, Hệ thống \& Cloud)} \\
+    \vspace{6pt}
+    \begin{tabular}{ll}
+        \textbf{Điện thoại:} & +84 396 161 954 \\
+        \textbf{Email:} & sonnhat129@gmail.com \\
+        \textbf{LinkedIn:} & \href{https://www.linkedin.com/in/son-n-114539152/}{linkedin.com/in/son-n-114539152/} \\
+        \textbf{Github:} & \href{https://github.com/sonnguyenHT}{github.com/sonnguyenHT} \\
+        \textbf{Website:} & \href{https://thaisonhtportfolio.vercel.app/}{thaisonhtportfolio.vercel.app} \\
+        \textbf{Địa chỉ:} & Thành phố Hồ Chí Minh, Việt Nam \\
+    \end{tabular}
+\end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.22\textwidth}
+    \vspace{0pt}
+    \raggedleft
+    \includegraphics[width=\linewidth,height=3.4cm,keepaspectratio]{image/sonnguyen.jpeg}
+\end{minipage}
+
+\vspace{10pt}
+\section*{Tóm tắt}
+Kỹ sư CNTT tốt nghiệp chuyên ngành An toàn thông tin, có kinh nghiệm vận hành hạ tầng mạng--hệ thống và cloud trong môi trường doanh nghiệp. Nắm vững TCP/IP, bảo mật mạng, VPN, giám sát sự cố, ảo hóa (VMware) và tự động hóa bằng Ansible/Terraform. Đã triển khai kết nối từ xa tàu--bờ (môi trường offshore), quản trị máy chủ Linux/Windows, thiết kế mạng cloud (VPC, vNet) và quy trình sao lưu--phục hồi. Mong muốn đóng góp tại PTSC Offshore Services với tinh thần chủ động, tư duy hệ thống và khả năng phối hợp đa phòng ban.
+
+\vspace{5pt}
+\section*{Kỹ năng}
+\begin{itemize}[leftmargin=0.5in]
+    \item \textbf{Mạng:} TCP/IP, subnetting, VLAN, NAT; routing/switching; firewall; phân tích lưu lượng; thiết kế VPC/vNet (AWS, Azure)
+    \item \textbf{VPN \& kết nối từ xa:} OpenVPN, WireGuard, Tailscale; Bastion Host, IAP/SSM; kết nối an toàn từ xa (on-prem/cloud)
+    \item \textbf{Hệ điều hành \& máy chủ:} Linux, Windows Server; cài đặt, vá bảo mật, tối ưu cấu hình, xử lý sự cố
+    \item \textbf{Dịch vụ nền tảng:} DNS, DHCP; tích hợp Azure AD/SSO; kiến thức Group Policy, IIS
+    \item \textbf{Ảo hóa:} VMware Workstation, VirtualBox, QEMU; Docker; Kubernetes (K8S, K3S) cho workload container
+    \item \textbf{Sao lưu \& phục hồi:} snapshot, replication; sao lưu/phục hồi dữ liệu (RDS, S3, quy trình DR)
+    \item \textbf{Giám sát \& cảnh báo:} Prometheus, Grafana, Loki, ELK (Elasticsearch, Logstash, Kibana); Cloud Logging, SLO/alerting
+    \item \textbf{Tự động hóa \& IaC:} Ansible, Terraform, OpenTofu, Terragrunt
+    \item \textbf{Cloud:} AWS, Azure, GCP
+    \item \textbf{Cơ sở dữ liệu:} MySQL, PostgreSQL
+    \item \textbf{Lập trình/script:} Python, Bash
+    \item \textbf{CI/CD \& bảo mật:} GitHub Actions, GitLab CI; Gitleaks, Semgrep, Trivy
+    \item \textbf{Quản lý phiên bản:} Git
+\end{itemize}
+
+\vspace{10pt}
+\section*{Kinh nghiệm}
+\noindent \textbf{\href{https://www.linkedin.com/company/h3tech/posts/?feedView=all}{H3Tech, Inc.}} \hfill \textit{TP. Hồ Chí Minh, 06/2025 -- hiện tại}  \\
+Kỹ sư DevOps \\
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+    \item \textbf{Hạ tầng mạng \& bảo mật:} Thiết kế Load Balancer, Cloud Armor (firewall/WAF), kiểm soát truy cập; triển khai \textbf{Bastion Host} và \textbf{IAP} để kết nối nội bộ an toàn, không expose dịch vụ ra internet.
+    \item \textbf{Hạ tầng dưới dạng mã (IaC):} Thiết kế và triển khai hạ tầng cloud có khả năng mở rộng trên \textbf{GCP} bằng \textbf{Terraform}, gồm Cloud Run, Cloud SQL và Artifact Registry.
+    \item \textbf{Tích hợp DevSecOps:} Tích hợp công cụ quét bảo mật tự động (\textbf{Trivy, Semgrep, Gitleaks}) vào pipeline CI/CD (\textbf{Cloud Build}) để phát hiện lỗ hổng và rò rỉ secret sớm trong vòng đời phát triển.
+    \item \textbf{Giám sát \& cảnh báo tự động:} Xây dựng hệ thống thông báo tích hợp \textbf{Google Chat}, cập nhật real-time trạng thái build/deploy và sức khỏe hệ thống.
+    \item \textbf{SRE \& quan sát hệ thống:} Cấu hình giám sát \textbf{vi phạm SLO}, tăng tỷ lệ lỗi (HTTP 5xx $>$ 5\%) và log ứng dụng quan trọng qua \textbf{Cloud Logging}, hỗ trợ xử lý sự cố nhanh.
+    \item \textbf{Hiện đại hóa nền tảng AWS:} Chuyển hạ tầng khách hàng từ \textbf{CDKTF} sang \textbf{OpenTofu} với wrapper \textbf{Terragrunt}; chuyển mã nguồn từ \textbf{AWS CodeCommit} sang \textbf{GitHub} và CI/CD từ \textbf{CodePipeline} sang \textbf{GitHub Actions}, tái sử dụng workflow cho nhiều repository.
+    \item \textbf{Tự động hóa cấp phát tenant:} Tự động hóa onboarding AWS (SSO \textbf{Azure AD}--AWS, health check, truy cập \textbf{RDS} qua \textbf{Bastion} + \textbf{SSM}); sao lưu/phục hồi và mã hóa secret bằng \textbf{SOPS}; rút thời gian khởi tạo hệ thống từ 2 ngày xuống 2 giờ.
+\end{itemize}
+
+\vspace{10pt}
+\noindent \textbf{\href{https://www.linkedin.com/company/ltvofficial/posts/?feedView=all}{LTV SOFTWARE COMPANY LIMITED}} \hfill \textit{TP. Hồ Chí Minh, 06/2024 -- 05/2025}  \\
+\textit{Kỹ sư DevOps} \\
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+    \item \textbf{VPN \& kết nối từ xa (offshore):} Triển khai \textbf{Tailscale VPN} kết nối tàu--bờ, đảm bảo truy cập từ xa an toàn, ổn định trong môi trường băng thông thấp---kinh nghiệm phù hợp vận hành IT tại khu vực offshore.
+    \item \textbf{Quản lý traffic \& bảo mật mạng:} Thiết kế \textbf{Istio Service Mesh} trên \textbf{AWS EKS} cho ingress, mutual TLS (mTLS) và chính sách định tuyến.
+    \item \textbf{Tối ưu CI/CD:} Xây dựng pipeline chuẩn hóa cho đa nền tảng bằng \textbf{GitHub Actions} và \textbf{GitLab CI}, rút ngắn thời gian triển khai.
+    \item \textbf{Hệ thống edge (K3s):} Vận hành máy chủ/dịch vụ trên \textbf{cluster K3s} tại tàu; triển khai, cập nhật từ xa và đảm bảo tính sẵn sàng.
+    \item \textbf{Giám sát \& xử lý sự cố:} Xây dựng hệ thống cảnh báo với \textbf{Prometheus, Grafana}; logging tập trung bằng \textbf{Grafana Loki} để phân tích sự cố nhanh.
+\end{itemize}
+
+\vspace{10pt}
+\noindent \textbf{\href{https://www.linkedin.com/company/galaxy-finx/posts/?feedView=all}{GALAXY FINX JOINT STOCK COMPANY}} \hfill \textit{TP. Hồ Chí Minh, 10/2022 -- 11/2023} \\
+\textit{Kỹ sư Cloud} \\
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+    \item \textbf{Hạ tầng mạng cloud:} Phát triển module \textbf{Terraform} cho \textbf{AWS} (VPC, ALB, ASG) và \textbf{Azure} (vNet, AKS), thiết kế mạng doanh nghiệp đa cloud.
+    \item \textbf{VPN \& quản lý máy chủ:} Thiết lập \textbf{OpenVPN}; dùng \textbf{Ansible} tự động cấp phát máy chủ, quản lý người dùng và cấu hình dịch vụ.
+    \item \textbf{Điều phối hạ tầng:} Quản lý state bằng \textbf{Terragrunt}, backend \textbf{S3} và khóa state \textbf{DynamoDB}.
+    \item \textbf{Triển khai GitOps:} Triển khai quy trình CD bằng \textbf{ArgoCD}, đồng bộ manifest Kubernetes với repository Git.
+    \item \textbf{Container hóa:} Dùng \textbf{GitHub Actions} tự động build image Docker và gắn tag bảo mật, tích hợp liền mạch vào container registry.
+    \item \textbf{Giám sát:} Triển khai và tinh chỉnh dashboard \textbf{Prometheus} và \textbf{Grafana} theo dõi sức khỏe hệ thống và hiệu năng ứng dụng.
+\end{itemize}
+
+\vspace{10pt}
+\section*{Học vấn}
+\noindent \textbf{Đại học FPT, TP. Hồ Chí Minh} \hfill \textit{09/2020 -- 05/2024} \\
+\textit{Chuyên ngành: An toàn thông tin} \\
+\textit{GPA tốt nghiệp: 8.1/10} \\
+Thành tích: Giải thưởng sinh viên xuất sắc các học kỳ Xuân, Hè và Thu.
+
+\vspace{5pt}
+\section*{Định hướng}
+Mong muốn phát triển sự nghiệp tại lĩnh vực dầu khí/offshore với vai trò quản trị hạ tầng mạng và hệ thống. Sẵn sàng bổ sung chứng chỉ CCNA, Windows Server/Azure Administrator và VCP; cam kết viết tài liệu vận hành, phối hợp đa phòng ban và chủ động xử lý sự cố trong môi trường áp lực cao.
+
+\end{document}
