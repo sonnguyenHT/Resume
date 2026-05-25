@@ -6,7 +6,7 @@ the face. Falls back to a manual ratio.
 
 from PIL import Image
 
-SRC = "image/20260313_162358.jpg"
+SRC = "image/image.png"
 DST = "image/sonnguyen_3x4.jpeg"
 
 img = Image.open(SRC)
