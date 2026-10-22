@@ -6,25 +6,46 @@ on:
       - main
     paths:
       - resume.tex
-    # paths-ignore:
-    #   - Instructions.md
-    #   - README.md
-    #   - .github/workflows/update_resume.yaml
-    #   - .gitignore
+      - .github/workflows/update_resume.yaml
+  workflow_dispatch:
 
+permissions:
+  contents: write
 
 jobs:
   update_resume:
     runs-on: ubuntu-latest
     steps:
-      - run: | 
-          sudo apt-get install poppler-utils -y
-          pip install pdf2image
       - uses: actions/checkout@v4
-      - run: python createImage.py
-      - run: |
+
+      - name: Compile LaTeX to PDF
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: resume.tex
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+          pip install -r requirements.txt
+
+      - name: Generate resume images
+        run: python createImage.py
+
+      - name: Commit and push changes
+        run: |
           git config --global user.email "sondzvl129@gmail.com"
           git config --global user.name "sonnguyenHT"
-          git add .
-          git commit -m "Update resume"
-          git push origin main
+          git add resume.pdf image/ README.md
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: auto-update resume PDF and preview images [skip ci]"
+            git push origin main
+          else
+            echo "No changes to commit"
+          fi

@@ -1,18 +1,17 @@
-# import module
+import glob
+import os
 from pdf2image import convert_from_path
 
-# Store Pdf with convert_from_path function
+os.makedirs('image', exist_ok=True)
+for old_file in glob.glob('image/page*.jpg'):
+    try:
+        os.remove(old_file)
+    except OSError:
+        pass
+
 images = convert_from_path('resume.pdf')
 
-# clear the read me file
-f = open("README.md", "w")
-f.write("")
-f.close()
-
-for i in range(len(images)):
-  
-      # Save pages as images in the pdf
-    images[i].save('./image/page'+ str(i) +'.jpg', 'JPEG')
-    # write to read me file
-    f = open("README.md", "a")
-    f.write("![page"+str(i)+"](./image/page"+ str(i) +".jpg)\n")
+with open("README.md", "w") as f:
+    for i, image in enumerate(images):
+        image.save(f'./image/page{i}.jpg', 'JPEG')
+        f.write(f"![page{i}](./image/page{i}.jpg)\n")
