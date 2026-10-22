@@ -45,11 +45,12 @@ I have practical experience in deploying and overseeing cloud-based, on-premise 
     % , Podman(pending)
     \item \textbf{Container Orchestration:} Kubernetes (K8S, K3S)
     \item \textbf{CI/CD Tools:} GitHub Actions, GitLab Actions, ArgoCD, CloudBuild, Bitbucket Pipelines
-    \item \textbf{Monitoring Tools:} Prometheus, Grafana, Loki, Logstash, Elasticsearch, Kibana
+    \item \textbf{Monitoring \& Analytics:} Prometheus, Grafana, Loki, PostHog, Logstash, Elasticsearch, Kibana
     \item \textbf{Service Mesh:} Istio
     \item \textbf{Message Queue:} Kafka
     \item \textbf{VPN:} OpenVPN, WireGuard, Tailscale
-    \item \textbf{AI tools:} Cursor, MCP(model context protocol), Cursor agents
+    \item \textbf{Identity \& Access Management (IAM / SSO):} ADFS, OIDC, SAML (Auth0, Authelia, Authentik)
+    \item \textbf{AI Tools:} Cursor, MCP (Model Context Protocol), Cursor agents, Hindsight
     \item \textbf{Security \& Code Quality:} Gitleaks, Semgrep, Trivy, SonarQube (secrets, SAST, container/network scans, compliance); ESLint, Prettier (linting, formatting, pre-commit hooks)
     % \item \textbf{Others:} ArgoCD, Jenkins(pending), JMX(java exporter), ELK Stack(pending), OpenVPN, WireGuard
 \end{itemize}
@@ -66,6 +67,11 @@ DevOps Engineer \\
     \item \textbf{SRE \& Observability:} Configured advanced monitoring for \textbf{SLO violations}, error rate spikes (HTTP 5xx $>$ 5\%), and critical application logs via \textbf{Cloud Logging}, enabling rapid incident response.
     \item \textbf{AWS Platform Modernization:} Migrated customer infrastructure from legacy \textbf{CDKTF} to \textbf{OpenTofu} with \textbf{Terragrunt} wrappers; moved source control from \textbf{AWS CodeCommit} to \textbf{GitHub} and CI/CD from \textbf{CodePipeline} to \textbf{GitHub Actions}, with reusable workflow configs across multiple repositories.
     \item \textbf{Tenant Provisioning Automation:} Automated end-to-end AWS onboarding (Azure--AWS SSO, \textbf{Elastic Beanstalk}, \textbf{Lambda}, health checks, \textbf{RDS} access via \textbf{Bastion} + \textbf{SSM}), cutting new-tenant setup from 2 days to 2 hours; encrypted Git-managed secrets with \textbf{SOPS} via the Terraform provider.
+    \item \textbf{Self-Hosted Platform (K3s \& ArgoCD):} Hosted internal services on a self-managed \textbf{K3s} cluster with GitOps-driven continuous delivery via \textbf{ArgoCD}, automating manifest synchronization and deployment workflows.
+    \item \textbf{Centralized Identity \& SSO:} Integrated Single Sign-On (\textbf{SSO}) across internal services (\textbf{GitLab, ArgoCD, Homarr}, and extensible to other tools) via \textbf{ADFS} and standard identity providers (\textbf{Auth0, Authelia, Authentik}).
+    \item \textbf{Developer Hub \& Knowledge Base:} Self-hosted \textbf{GitLab} for internal source code management and \textbf{GitLab Pages} for team technical documentation secured with GitLab authorization; deployed \textbf{Homarr} as a centralized service portal dashboard to streamline navigation and team onboarding.
+    \item \textbf{Product Analytics \& Observability:} Self-hosted \textbf{PostHog} to ingest user activity events for product research, track client-side errors, and replay user sessions for rapid debugging.
+    \item \textbf{AI Agent Long-Term Memory:} Self-hosted \textbf{Hindsight} to provide persistent, long-term memory for developer and Business Analyst (BA) AI agents, preserving continuous context across sessions without repetitive knowledge re-feeding.
 \end{itemize}
 
 \vspace{10pt}
