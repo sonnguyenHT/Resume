@@ -200,6 +200,7 @@
                         <span class="skill-tag">Prometheus</span>
                         <span class="skill-tag">Grafana</span>
                         <span class="skill-tag">Loki</span>
+                        <span class="skill-tag">PostHog</span>
                     </div>
                 </div>
                 
@@ -215,6 +216,33 @@
                 
                 <div class="skill-category">
                     <div class="skill-header">
+                        <i class="fas fa-id-badge"></i>
+                        <h3 data-vi="Identity & SSO" data-en="Identity & SSO">Identity & SSO</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-tag">ADFS</span>
+                        <span class="skill-tag">Auth0</span>
+                        <span class="skill-tag">Authelia</span>
+                        <span class="skill-tag">Authentik</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3 data-vi="Bảo mật & DevSecOps" data-en="Security & DevSecOps">Bảo mật & DevSecOps</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-tag">Trivy (SBOM/Image)</span>
+                        <span class="skill-tag">DefectDojo</span>
+                        <span class="skill-tag">Semgrep</span>
+                        <span class="skill-tag">Gitleaks</span>
+                        <span class="skill-tag">SonarQube</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
                         <i class="fas fa-robot"></i>
                         <h3 data-vi="Công cụ AI" data-en="AI tools">Công cụ AI</h3>
                     </div>
@@ -222,6 +250,7 @@
                         <span class="skill-tag">n8n</span>
                         <span class="skill-tag">OpenAI</span>
                         <span class="skill-tag">MCP(model context protocol)</span>
+                        <span class="skill-tag">Hindsight</span>
                     </div>
                 </div>
             </div>
@@ -233,7 +262,35 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">06/2024 - <span data-vi="Hiện tại" data-en="Present">Hiện tại</span></div>
+                    <div class="timeline-date">06/2025 - <span data-vi="Hiện tại" data-en="Present">Hiện tại</span></div>
+                    <div class="timeline-content">
+                        <h3 class="company-name">
+                            <a href="https://www.linkedin.com/company/h3tech/posts/?feedView=all" target="_blank" rel="noopener">H3Tech, Inc.</a>
+                        </h3>
+                        <span class="job-title">DevOps Engineer</span>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-vi="Hồ Chí Minh, Việt Nam" data-en="Ho Chi Minh City, Vietnam">Hồ Chí Minh, Việt Nam</span>
+                        </div>
+                        <ul class="responsibility-list">
+                            <li data-vi="Thiết kế và triển khai hạ tầng đám mây có khả năng mở rộng trên GCP bằng Terraform (Cloud Run, Cloud SQL, Load Balancer, Cloud Armor, Artifact Registry)" data-en="Architected and deployed scalable cloud infrastructure on GCP using Terraform (Cloud Run, Cloud SQL, Load Balancer, Cloud Armor, Artifact Registry)">Thiết kế và triển khai hạ tầng đám mây có khả năng mở rộng trên GCP bằng Terraform (Cloud Run, Cloud SQL, Load Balancer, Cloud Armor, Artifact Registry)</li>
+                            <li data-vi="Triển khai Bastion Host và Identity-Aware Proxy (IAP) để bảo mật kết nối nội bộ tới Cloud SQL, đảm bảo không mở port database ra internet" data-en="Implemented secure Bastion Host solution to manage private connections to Cloud SQL via Identity-Aware Proxy (IAP), ensuring zero database exposure to public internet">Triển khai Bastion Host và Identity-Aware Proxy (IAP) để bảo mật kết nối nội bộ tới Cloud SQL, đảm bảo không mở port database ra internet</li>
+                            <li data-vi="Tích hợp công cụ quét bảo mật tự động (Trivy, Semgrep, Gitleaks) vào CI/CD pipeline (Cloud Build) để phát hiện sớm lỗ hổng và lộ secret" data-en="Integrated automated security scanning tools (Trivy, Semgrep, Gitleaks) into CI/CD pipelines (Cloud Build) for early vulnerability and secret leak detection">Tích hợp công cụ quét bảo mật tự động (Trivy, Semgrep, Gitleaks) vào CI/CD pipeline (Cloud Build) để phát hiện sớm lỗ hổng và lộ secret</li>
+                            <li data-vi="Hiện đại hóa nền tảng AWS: chuyển đổi CDKTF sang OpenTofu và Terragrunt, chuyển source code sang GitHub và CI/CD sang GitHub Actions" data-en="Modernized AWS platform from legacy CDKTF to OpenTofu with Terragrunt; migrated source control to GitHub and CI/CD to GitHub Actions with reusable workflows">Hiện đại hóa nền tảng AWS: chuyển đổi CDKTF sang OpenTofu và Terragrunt, chuyển source code sang GitHub và CI/CD sang GitHub Actions</li>
+                            <li data-vi="Tự động hóa onboarding tenant AWS (Azure-AWS SSO, Elastic Beanstalk, Lambda, RDS Bastion + SSM), giảm thời gian từ 2 ngày xuống 2 giờ" data-en="Automated end-to-end AWS tenant onboarding (Azure-AWS SSO, Elastic Beanstalk, Lambda, RDS Bastion + SSM), reducing setup time from 2 days to 2 hours">Tự động hóa onboarding tenant AWS (Azure-AWS SSO, Elastic Beanstalk, Lambda, RDS Bastion + SSM), giảm thời gian từ 2 ngày xuống 2 giờ</li>
+                            <li data-vi="Xây dựng repository CI/CD template tập trung và phân phiên bản trên GitLab CI để các repo kế thừa các step (build, push, quét bảo mật Trivy SBOM/image, đẩy kết quả vào DefectDojo, deploy SSH cho các service VM cũ đang chuyển đổi sang K8s), cho phép cập nhật đồng thời nhiều repo" data-en="Architected a centralized, versioned CI/CD template repository in GitLab CI inherited across project repositories, standardizing build/push stages, Trivy SBOM/container security scans, DefectDojo vulnerability reporting, and SSH deployments for legacy VM services migrating to Kubernetes">Xây dựng repository CI/CD template tập trung và phân phiên bản trên GitLab CI để các repo kế thừa các step (build, push, quét bảo mật Trivy SBOM/image, đẩy kết quả vào DefectDojo, deploy SSH cho các service VM cũ đang chuyển đổi sang K8s), cho phép cập nhật đồng thời nhiều repo</li>
+                            <li data-vi="Vận hành và self-host các dịch vụ nội bộ trên cụm K3s, triển khai liên tục (CD) theo mô hình GitOps qua ArgoCD" data-en="Hosted internal services on a self-managed K3s cluster with GitOps-driven Continuous Delivery via ArgoCD, automating manifest sync and deployments">Vận hành và self-host các dịch vụ nội bộ trên cụm K3s, triển khai liên tục (CD) theo mô hình GitOps qua ArgoCD</li>
+                            <li data-vi="Tích hợp SSO tập trung (ADFS, Auth0, Authelia, Authentik) cho GitLab, ArgoCD, Homarr và mở rộng cho các dịch vụ khác" data-en="Integrated centralized Single Sign-On (SSO) across internal services (GitLab, ArgoCD, Homarr, and extensible to future tools) via ADFS and standard IdPs (Auth0, Authelia, Authentik)">Tích hợp SSO tập trung (ADFS, Auth0, Authelia, Authentik) cho GitLab, ArgoCD, Homarr và mở rộng cho các dịch vụ khác</li>
+                            <li data-vi="Triển khai GitLab lưu trữ mã nguồn nội bộ, GitLab Pages (kèm phân quyền GitLab) làm cổng tài liệu kỹ thuật và Homarr làm dashboard tập trung" data-en="Self-hosted GitLab for internal source code, GitLab Pages with GitLab authorization for team documentation, and Homarr as a centralized portal dashboard to streamline onboarding">Triển khai GitLab lưu trữ mã nguồn nội bộ, GitLab Pages (kèm phân quyền GitLab) làm cổng tài liệu kỹ thuật và Homarr làm dashboard tập trung</li>
+                            <li data-vi="Self-host PostHog để thu thập user activity phục vụ nghiên cứu sản phẩm, theo dõi lỗi và tái tạo session người dùng" data-en="Self-hosted PostHog to ingest user activity for product research, error tracking, and user session replay for rapid debugging">Self-host PostHog để thu thập user activity phục vụ nghiên cứu sản phẩm, theo dõi lỗi và tái tạo session người dùng</li>
+                            <li data-vi="Triển khai Hindsight cung cấp bộ nhớ dài hạn (long-term memory) cho AI agent của developer và BA, duy trì ngữ cảnh làm việc liên tục" data-en="Self-hosted Hindsight to provide persistent long-term memory for developer and BA AI agents, preserving continuous context across sessions">Triển khai Hindsight cung cấp bộ nhớ dài hạn (long-term memory) cho AI agent của developer và BA, duy trì ngữ cảnh làm việc liên tục</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">06/2024 - 05/2025</div>
                     <div class="timeline-content">
                         <h3 class="company-name">
                             <a href="https://www.linkedin.com/company/ltvofficial/posts/?feedView=all" target="_blank" rel="noopener">LTV SOFTWARE COMPANY LIMITED</a>
